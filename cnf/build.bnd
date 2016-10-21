@@ -1,0 +1,19 @@
+-plugin.1.Local: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name=Local; \
+		local=${workspace}/cnf/localrepo; \
+		pretty=true
+
+-plugin.2.Release: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name=Release; \
+		local=${workspace}/cnf/release; \
+		pretty=true
+
+-plugin.3.Bndtools-Hub: \
+    aQute.bnd.deployer.repository.FixedIndexedRepo; \
+        name=Bndtools-Hub; \
+        locations=https://raw.githubusercontent.com/bndtools/bundle-hub/master/index.xml.gz; \
+        cache = ${build}/cache/Bndtools-Hub
+
+-releaserepo: Release
