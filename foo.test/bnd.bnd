@@ -15,7 +15,8 @@ Test-Cases: ${classes;CONCRETE;ANNOTATED;org.junit.runner.RunWith}
 	osgi.annotation; version=6.0.1,\
 	osgi.core; version=6.0,\
 	osgi.cmpn; version=6.0,\
-	foo;version=latest
+	foo;version=latest,\
+	foo.test.fragment;version=latest
 
 javac.source: 1.7
 javac.target: 1.7
@@ -25,7 +26,8 @@ javac.target: 1.7
 -runbundles: \
 	${junit},\
 	${mockito},\
-	foo;version=latest
+	foo;version=latest,\
+	foo.test.fragment;version=latest
 
 -runtrace true
 

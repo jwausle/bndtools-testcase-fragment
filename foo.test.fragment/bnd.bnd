@@ -40,3 +40,4 @@ Fragment-Host: foo
 # Use Felix by default
 -runfw: org.apache.felix.framework;version='[5.4.0,5.4.0]'
 -runvm: -ea
+Export-Package: foo.internal

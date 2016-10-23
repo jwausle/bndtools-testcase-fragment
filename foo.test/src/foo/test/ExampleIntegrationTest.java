@@ -9,6 +9,7 @@ import org.osgi.framework.FrameworkUtil;
 
 import foo.Example;
 //import foo.internal.InternalExample;
+import foo.internal.InternalExample;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ExampleIntegrationTest {
@@ -26,7 +27,7 @@ public class ExampleIntegrationTest {
 	@Test
 	public void testExample() {
 		FrameworkUtil.getBundle(Example.class).getBundleContext();
-//		FrameworkUtil.getBundle(InternalExample.class).getBundleContext();
+		FrameworkUtil.getBundle(InternalExample.class).getBundleContext();
 		System.out.println("    testing ... ");
 	}
 
