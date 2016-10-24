@@ -1,0 +1,6 @@
+Bundle-Version: 0.0.0.${tstamp}
+Private-Package: foo.internal
+Export-Package: foo.internal
+Fragment-Host: foo.host
+
+-fixupmessages: foo.internal.*
