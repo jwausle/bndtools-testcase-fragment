@@ -1,4 +1,4 @@
--savemanifest: target/${bsn}-MANIFEST.MF
+-savemanifest: generated/${bsn}-MANIFEST.MF
 
 -plugin.1.Local: \
 	aQute.bnd.deployer.repository.LocalIndexedRepo; \

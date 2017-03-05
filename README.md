@@ -1,5 +1,24 @@
 # Bndtools usergroup 
 
+Collect some questions from https://groups.google.com/forum/#!forum/bndtools-users.
+
+## Syn Bundle-Version with -savemanifest
+
+Problem: MANIFEST.MF version can differ while usage of -savemanifest
+
+Related bndtools-user group post: 
+
+- https://groups.google.com/forum/#!topic/bndtools-users/zNcUdMEp2EM
+
+Reproduce:
+
+```
+# git checkout syn-bundleversion
+# sh gradlew  clean sleep60Seconds release
+# grep Bundle-Version foo/generated/foo.host-MANIFEST.MF && manifest foo/generated/foo.host.jar | grep Bundle-Version
+```
+* manifest is alias for 'bnd print --manifest'
+
 ##  2 JARs for one bnd-project after: 0a3244f9e6ba33bc4302b62ca2898a4ada0be091
 
 Problem: genrate multiple JARs from one bnd-project

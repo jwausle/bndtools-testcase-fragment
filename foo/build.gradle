@@ -1,7 +1,10 @@
-task sleep60Seconds(dependsOn: test) {
+task sleep60Seconds(dependsOn: assemble) {
    doLast {
        print "Sleeping 60 seconds"
-       Thread.sleep(60 * 1000)
+       60.times {
+          print "."
+          Thread.sleep(1000)
+       }
        println "."
    }
 }
