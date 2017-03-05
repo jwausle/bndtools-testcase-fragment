@@ -1,3 +1,5 @@
+-savemanifest: target/${bsn}-MANIFEST.MF
+
 -plugin.1.Local: \
 	aQute.bnd.deployer.repository.LocalIndexedRepo; \
 		name=Local; \
@@ -17,3 +19,16 @@
         cache = ${build}/cache/Bndtools-Hub
 
 -releaserepo: Release
+-baselinerepo: Release
+-buildrepo: Local
+
+# react for: './gradlew -Drelease=true|false' => release
+#       and: './gradlew -Dbuildno=DEV'        => to force 1.0.0.${buildno}
+buildno.local  = ${if;${def;buildno};${buildno};${tstamp}}
+version.suffix = ${if;${def;release};.${buildno.local};-SNAPSHOT}
+
+-pom: \
+    groupid = com.qivicon.gateway ,\
+    version = ${versionmask;===;${@version}}${version.suffix}
+
+-snapshot: ${buildno.local}

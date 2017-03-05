@@ -1,0 +1,7 @@
+task sleep60Seconds(dependsOn: test) {
+   doLast {
+       print "Sleeping 60 seconds"
+       Thread.sleep(60 * 1000)
+       println "."
+   }
+}
