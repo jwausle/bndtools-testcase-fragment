@@ -31,7 +31,7 @@ javac.target: 1.7
 
 -runtrace true
 
-Bundle-Version: 0.0.0.${tstamp}
+Bundle-Version: 1.2.1.${tstamp}
 Private-Package: foo.test
 
 # Needed for Mockito's mocking to work
