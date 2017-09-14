@@ -1,4 +1,0 @@
-Bundle-Version: 0.0.1
-Private-Package: depends.on.p2.internal
-
--buildpath: com.qivicon.common.messaging;version='[1.1,1.2)'

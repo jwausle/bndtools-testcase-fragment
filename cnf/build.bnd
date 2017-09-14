@@ -4,3 +4,9 @@
     aQute.bnd.repository.p2.provider.P2Repository; \
        name = "P2-${p2.version}"; \
        url  = "file:///${build}/p2/${p2.version}"      
+
+-plugin.1.Bndtools-Hub: \
+    aQute.bnd.deployer.repository.FixedIndexedRepo; \
+        name=Bndtools-Hub; \
+        locations=https://raw.githubusercontent.com/bndtools/bundle-hub/master/index.xml.gz; \
+        cache = ${build}/cache/Bndtools-Hub
